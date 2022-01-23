@@ -1,0 +1,10 @@
+-Agregar costo a la reserva de la sala
+-Al hacer la reserva impirmir un recibo (ticket)
+-Agregar al reporte de reservas el importe de las reservas y hacer sumatoria al final
+-Control de usuarios para que solo el adminsitrador pueda eliminar reservas
+-Tener opción de que un cliente reserve todo 1 mes o una semana, una quincena etc.. 
+y que me calcule cuanto pagaría todo el mes basado en el precio de la sala
+
+-Agregarle modulo para ventas
+-Agregarle el modulo de productos
+-Agregar el modulo de clientes para las ventas y tambien enlazar al campo "reserva a nombre de:" 
