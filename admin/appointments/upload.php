@@ -22,11 +22,11 @@ if(isset($_GET['id'])){
         <input type="hidden" name="id" value="<?= isset($id) ? $id : '' ?>">
             <input type="hidden" name="status" value="6">
         <div class="form-group">
-            <small class="mx-2">Test Report <small><em>(PDF only)</em></small></small>
+            <small class="mx-2">Reporte de Pruebas <small><em>(Solo PDF)</em></small></small>
             <input type="file" name="report" class=" form-control form-control-sm form-control-border" accepts="application/pdf" required></input>
         </div>
         <div class="form-group">
-            <small class="mx-2">Remarks</small>
+            <small class="mx-2">Observaciones</small>
             <textarea name="remarks" id="remarks" rows="3" class="form-control form-control-sm rounded-0" required></textarea>
         </div>
     </form>
@@ -60,7 +60,7 @@ if(isset($_GET['id'])){
                 dataType: 'json',
 				error:err=>{
 					console.log(err)
-					alert_toast("An error occured",'error');
+					alert_toast("Ocurrió un error.",'error');
 					end_loader();
 				},
                 success:function(resp){
@@ -72,7 +72,7 @@ if(isset($_GET['id'])){
                         _this.prepend(el)
                     }else{
                         el.addClass("alert-danger")
-                        el.text("An error occurred due to unknown reason.")
+                        el.text("Se produjo un error debido a un motivo desconocido.")
                         _this.prepend(el)
                     }
                     el.show('slow')

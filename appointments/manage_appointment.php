@@ -45,13 +45,7 @@ if(isset($_GET['id'])){
                     <?php endwhile; ?>
                 </select>
             </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-md-12">
-                <label for="prescription" class="control-label">Prescripción <small><em>(Si aplica)</em></small></label>
-                <input type="file" name="prescription" accept="application/msword, .doc, .docx, .txt, application/pdf" id="prescription" class="form-control form-control-border" >
-            </div>
-        </div>
+        </div>        
     </form>
 </div>
 <script>

@@ -25,18 +25,18 @@ if(isset($_GET['id'])){
         <?php else: ?>
         <div class="form-group">
             <select id="status" name="status" class="form-control form-control-sm form-border" required>
-                <option value="0" <?= isset($status) && $status == 0 ? 'selected' : '' ?>>Pending</option>
-                <option value="1" <?= isset($status) && $status == 1 ? 'selected' : '' ?>>Approved</option>
-                <option value="2" <?= isset($status) && $status == 2 ? 'selected' : '' ?>>Sample Collected</option>
-                <option value="3" <?= isset($status) && $status == 3 ? 'selected' : '' ?>>Delivered to Lab</option>
-                <option value="4" <?= isset($status) && $status == 4 ? 'selected' : '' ?>>Done</option>
-                <option value="5" <?= isset($status) && $status == 5 ? 'selected' : '' ?>>Cancelled</option>
+                <option value="0" <?= isset($status) && $status == 0 ? 'selected' : '' ?>>Pendiente</option>
+                <option value="1" <?= isset($status) && $status == 1 ? 'selected' : '' ?>>Aprobado</option>
+                <option value="2" <?= isset($status) && $status == 2 ? 'selected' : '' ?>>Muestra-Recogida</option>
+                <option value="3" <?= isset($status) && $status == 3 ? 'selected' : '' ?>>Enviado-al-laboratorio</option>
+                <option value="4" <?= isset($status) && $status == 4 ? 'selected' : '' ?>>Finalizado</option>
+                <option value="5" <?= isset($status) && $status == 5 ? 'selected' : '' ?>>Cancelado</option>
             </select>
-            <small class="mx-2">Status</small>
+            <small class="mx-2">Estado</small>
         </div>
         <?php endif; ?>
         <div class="form-group">
-            <small class="mx-2">Remarks</small>
+            <small class="mx-2">Observaciones</small>
             <textarea name="remarks" id="remarks" rows="3" class="form-control form-control-sm rounded-0" required></textarea>
         </div>
     </form>
@@ -48,7 +48,7 @@ if(isset($_GET['id'])){
             $('#test_ids').select2({
                 dropdownParent: $('#uni_modal'),
                 width:'100%',
-                placeholder:'Please Select Test(s) Here',
+                placeholder:'Selecciona tu prueba(s) acá',
             })
         })
         $('#uni_modal #update-status-form').submit(function(e){
@@ -70,7 +70,7 @@ if(isset($_GET['id'])){
                 dataType: 'json',
 				error:err=>{
 					console.log(err)
-					alert_toast("An error occured",'error');
+					alert_toast("Ocurrió un error.",'error');
 					end_loader();
 				},
                 success:function(resp){
@@ -82,7 +82,7 @@ if(isset($_GET['id'])){
                         _this.prepend(el)
                     }else{
                         el.addClass("alert-danger")
-                        el.text("An error occurred due to unknown reason.")
+                        el.text("Se produjo un error debido a un motivo desconocido.")
                         _this.prepend(el)
                     }
                     el.show('slow')

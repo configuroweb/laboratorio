@@ -78,16 +78,7 @@ if(isset($_GET['id'])){
                             }
                         ?>
                     </div>
-                    <div class="col-2 border bg-gradient-primary text-light">Prescripción</div>
-                    <div class="col-4 border ">
-                        <?php 
-                        if(isset($prescription_path)){
-                            echo "<a href='".base_url.$prescription_path."' target='_blank' download='".(explode('?',str_replace("uploads/prescriptions/",'',$prescription_path))[0])."'>".(explode('?',str_replace("uploads/prescriptions/",'',$prescription_path))[0])."</a>";
-                        }else{
-                            echo "N/A";
-                        }
-                        ?>
-                    </div>
+                    
                     <?php if(isset($status) && $status == 6): ?>
                     <div class="col-2 border bg-gradient-primary text-light">Informe Cargado</div>
                     <div class="col-10 border ">
